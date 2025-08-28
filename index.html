@@ -8,19 +8,24 @@
 
     body {
       font-family: 'Press Start 2P', cursive;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: white;
       padding: 20px;
       margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
     header {
       text-align: center;
       margin-bottom: 20px;
+      position: relative;
     }
     header h1 {
       font-size: 22px;
       text-shadow: 0 0 10px cyan, 0 0 20px blue;
       margin: 10px 0;
+      color: #00eaff;
     }
     header h2 {
       font-size: 14px;
@@ -28,33 +33,52 @@
       text-shadow: 0 0 8px #ffea00, 0 0 15px orange;
       margin: 5px 0;
     }
+    #muteBtn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      padding: 8px 12px;
+      border: none;
+      background: #ff4081;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 10px;
+      font-family: inherit;
+      text-transform: uppercase;
+      box-shadow: 0 0 8px #ff4081, 0 0 14px pink;
+    }
+    #muteBtn:hover {
+      background: #e91e63;
+    }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       gap: 15px;
+      flex: 1;
     }
     .card {
-      background: rgba(0,0,0,0.7);
-      padding: 10px;
+      background: rgba(255,255,255,0.05);
+      padding: 12px;
       text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-      transition: transform 0.2s;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.8);
+      transform: scale(1.08);
+      box-shadow: 0 0 20px cyan, 0 0 40px blue;
     }
     .card img {
       width: 100%;
       max-height: 110px;
       object-fit: contain;
-      border-radius: 8px;
+      border-radius: 10px;
     }
     .card p {
       margin: 8px 0;
     }
-    button {
+    button.playBtn {
       margin-top: 8px;
       padding: 8px 12px;
       border: none;
@@ -68,8 +92,16 @@
       box-shadow: 0 0 8px #ff4081, 0 0 14px pink;
       transition: background 0.3s;
     }
-    button:hover {
+    button.playBtn:hover {
       background: #e91e63;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #00eaff;
+      text-shadow: 0 0 6px cyan, 0 0 12px blue;
     }
   </style>
 </head>
@@ -77,70 +109,95 @@
   <header>
     <h1>🎮 Moonsun Creation Arcade 🎮</h1>
     <h2>Play Free Classic Games</h2>
+    <button id="muteBtn">🔊 Mute</button>
   </header>
+
+  <!-- Background music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://files.catbox.moe/1odx0h.mp3" type="audio/mpeg">
+  </audio>
 
   <div class="grid">
 
     <div class="card">
       <p>Snake</p>
       <img src="https://i.ibb.co/pw2HFM9/snake.png" alt="Snake">
-      <a href="https://playsnake.org/" target="_blank"><button>Play</button></a>
+      <a href="https://playsnake.org/" target="_blank"><button class="playBtn">Play</button></a>
     </div>
 
     <div class="card">
       <p>Tetris</p>
       <img src="https://i.ibb.co/7S0b3d6/tetris.png" alt="Tetris">
-      <a href="https://tetris.com/play-tetris" target="_blank"><button>Play</button></a>
+      <a href="https://tetris.com/play-tetris" target="_blank"><button class="playBtn">Play</button></a>
     </div>
 
     <div class="card">
       <p>Pacman</p>
       <img src="https://i.ibb.co/MfQ7zN8/pacman.png" alt="Pacman">
-      <a href="https://www.google.com/logos/2010/pacman10-i.html" target="_blank"><button>Play</button></a>
+      <a href="https://www.google.com/logos/2010/pacman10-i.html" target="_blank"><button class="playBtn">Play</button></a>
     </div>
 
     <div class="card">
       <p>Minesweeper</p>
       <img src="https://i.ibb.co/mRZtpzN/minesweeper.png" alt="Minesweeper">
-      <a href="https://minesweeper.online/" target="_blank"><button>Play</button></a>
+      <a href="https://minesweeper.online/" target="_blank"><button class="playBtn">Play</button></a>
     </div>
 
     <div class="card">
       <p>2048</p>
       <img src="https://i.ibb.co/vmD2NQw/2048.png" alt="2048">
-      <a href="https://play2048.co/" target="_blank"><button>Play</button></a>
+      <a href="https://play2048.co/" target="_blank"><button class="playBtn">Play</button></a>
     </div>
 
     <div class="card">
       <p>Flappy Bird</p>
       <img src="https://i.ibb.co/0Y3jvXs/flappy.png" alt="Flappy Bird">
-      <a href="https://flappybird.io/" target="_blank"><button>Play</button></a>
+      <a href="https://flappybird.io/" target="_blank"><button class="playBtn">Play</button></a>
     </div>
 
     <div class="card">
       <p>Chess</p>
       <img src="https://i.ibb.co/cwWh0Bg/chess.png" alt="Chess">
-      <a href="https://www.chess.com/play/online" target="_blank"><button>Play</button></a>
+      <a href="https://www.chess.com/play/online" target="_blank"><button class="playBtn">Play</button></a>
     </div>
 
     <div class="card">
       <p>Sudoku</p>
       <img src="https://i.ibb.co/R0T1W0F/sudoku.png" alt="Sudoku">
-      <a href="https://sudoku.com/" target="_blank"><button>Play</button></a>
+      <a href="https://sudoku.com/" target="_blank"><button class="playBtn">Play</button></a>
     </div>
 
     <div class="card">
       <p>Solitaire</p>
       <img src="https://i.ibb.co/MpkW6DC/solitaire.png" alt="Solitaire">
-      <a href="https://www.solitr.com/" target="_blank"><button>Play</button></a>
+      <a href="https://www.solitr.com/" target="_blank"><button class="playBtn">Play</button></a>
     </div>
 
     <div class="card">
       <p>Pong</p>
       <img src="https://i.ibb.co/FWzWx5s/pong.png" alt="Pong">
-      <a href="https://pong-2.com/" target="_blank"><button>Play</button></a>
+      <a href="https://pong-2.com/" target="_blank"><button class="playBtn">Play</button></a>
     </div>
 
   </div>
+
+  <footer>
+    Made with ❤️ by Moonsun Creation
+  </footer>
+
+  <script>
+    const bgMusic = document.getElementById("bgMusic");
+    const muteBtn = document.getElementById("muteBtn");
+
+    muteBtn.addEventListener("click", () => {
+      if (bgMusic.muted) {
+        bgMusic.muted = false;
+        muteBtn.textContent = "🔊 Mute";
+      } else {
+        bgMusic.muted = true;
+        muteBtn.textContent = "🔈 Unmute";
+      }
+    });
+  </script>
 </body>
 </html>
