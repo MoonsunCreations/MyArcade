@@ -4,27 +4,75 @@
   <meta charset="UTF-8">
   <title>My Arcade</title>
   <style>
-    body{font-family:sans-serif; background:#f0f0f0; padding:10px;}
-    h1{text-align:center;}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;}
-    .card{background:white;padding:10px;text-align:center;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.2);}
-    button{padding:8px 12px;border:none;background:#0b74de;color:white;border-radius:6px;cursor:pointer;}
+    body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      padding: 10px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+    }
+    .card {
+      background: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 8px;
+    }
+    button {
+      padding: 8px 12px;
+      border: none;
+      background: #0b74de;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #095bb3;
+    }
   </style>
 </head>
 <body>
   <h1>🎮 My Arcade</h1>
+
   <div class="grid">
+    <!-- Snake -->
     <div class="card">
+      <img src="https://i.ibb.co/yY3zP3z/snake.jpg" alt="Snake">
       <p>Snake</p>
-      <a href="https://playsnake.org/" target="_blank"><button>Play</button></a>
+      <a href="https://playsnake.org/" target="_blank">
+        <button>Play</button>
+      </a>
     </div>
+
+    <!-- Tetris -->
     <div class="card">
+      <img src="https://i.ibb.co/9ns0rjP/tetris.jpg" alt="Tetris">
       <p>Tetris</p>
-      <a href="https://tetris.com/play-tetris" target="_blank"><button>Play</button></a>
+      <a href="https://tetris.com/play-tetris" target="_blank">
+        <button>Play</button>
+      </a>
     </div>
+
+    <!-- Pacman -->
     <div class="card">
-      <p>Pacman</p>
-      <a href="https://www.google.com/search?q=play+pacman" target="_blank"><button>Play</button></a>
+      <img src="https://i.ibb.co/0VHJ3yK/pacman.jpg" alt="Pacman">
+      <p>Pac-Man</p>
+      <a href="https://www.freepacman.org/" target="_blank">
+        <button>Play</button>
+      </a>
     </div>
   </div>
 </body>
