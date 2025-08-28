@@ -2,78 +2,145 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>My Arcade</title>
+  <title>Moonsun Creation Arcade</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
     body {
-      font-family: sans-serif;
-      background: #f0f0f0;
-      padding: 10px;
+      font-family: 'Press Start 2P', cursive;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 20px;
+      margin: 0;
     }
-    h1 {
+    header {
       text-align: center;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 22px;
+      text-shadow: 0 0 10px cyan, 0 0 20px blue;
+      margin: 10px 0;
+    }
+    header h2 {
+      font-size: 14px;
+      color: #ffea00;
+      text-shadow: 0 0 8px #ffea00, 0 0 15px orange;
+      margin: 5px 0;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       gap: 15px;
     }
     .card {
-      background: white;
+      background: rgba(0,0,0,0.7);
       padding: 10px;
       text-align: center;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.8);
     }
     .card img {
       width: 100%;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 6px;
-      margin-bottom: 8px;
+      max-height: 110px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    .card p {
+      margin: 8px 0;
     }
     button {
+      margin-top: 8px;
       padding: 8px 12px;
       border: none;
-      background: #0b74de;
+      background: #ff4081;
       color: white;
       border-radius: 6px;
       cursor: pointer;
+      font-family: inherit;
+      font-size: 10px;
+      text-transform: uppercase;
+      box-shadow: 0 0 8px #ff4081, 0 0 14px pink;
+      transition: background 0.3s;
     }
     button:hover {
-      background: #095bb3;
+      background: #e91e63;
     }
   </style>
 </head>
 <body>
-  <h1>🎮 My Arcade</h1>
+  <header>
+    <h1>🎮 Moonsun Creation Arcade 🎮</h1>
+    <h2>Play Free Classic Games</h2>
+  </header>
 
   <div class="grid">
-    <!-- Snake -->
+
     <div class="card">
-      <img src="https://i.ibb.co/yY3zP3z/snake.jpg" alt="Snake">
       <p>Snake</p>
-      <a href="https://playsnake.org/" target="_blank">
-        <button>Play</button>
-      </a>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Snake_game.png" alt="Snake">
+      <a href="https://playsnake.org/" target="_blank"><button>Play</button></a>
     </div>
 
-    <!-- Tetris -->
-    <div class="card>
- src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Tetris_game.svg" alt="Tetris">
-      <p>Tetris</p>
-      <a href="https://tetris.com/play-tetris" target="_blank">
-        <button>Play</button>
-      </a>
-    </div>
-
-    <!-- Pacman -->
     <div class="card">
-      <img src="https://i.ibb.co/0VHJ3yK/pacman.jpg" alt="Pacman">
-      <p>Pac-Man</p>
-      <a href="https://www.freepacman.org/" target="_blank">
-        <button>Play</button>
-      </a>
+      <p>Tetris</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Tetris_game.svg" alt="Tetris">
+      <a href="https://tetris.com/play-tetris" target="_blank"><button>Play</button></a>
     </div>
+
+    <div class="card">
+      <p>Pacman</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Pac-man.png" alt="Pacman">
+      <a href="https://www.google.com/logos/2010/pacman10-i.html" target="_blank"><button>Play</button></a>
+    </div>
+
+    <div class="card">
+      <p>Minesweeper</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Minesweeper_uncovered.png" alt="Minesweeper">
+      <a href="https://minesweeper.online/" target="_blank"><button>Play</button></a>
+    </div>
+
+    <div class="card">
+      <p>2048</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/2048_logo.png" alt="2048">
+      <a href="https://play2048.co/" target="_blank"><button>Play</button></a>
+    </div>
+
+    <div class="card">
+      <p>Flappy Bird</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Flappy_Bird_icon.png" alt="Flappy Bird">
+      <a href="https://flappybird.io/" target="_blank"><button>Play</button></a>
+    </div>
+
+    <div class="card">
+      <p>Chess</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Chess_piece_-_White_pawn.JPG" alt="Chess">
+      <a href="https://www.chess.com/play/online" target="_blank"><button>Play</button></a>
+    </div>
+
+    <div class="card">
+      <p>Sudoku</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Sudoku-by-L2G-20050714.gif" alt="Sudoku">
+      <a href="https://sudoku.com/" target="_blank"><button>Play</button></a>
+    </div>
+
+    <div class="card">
+      <p>Solitaire</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Solitaire_game.png" alt="Solitaire">
+      <a href="https://www.solitr.com/" target="_blank"><button>Play</button></a>
+    </div>
+
+    <div class="card">
+      <p>Pong</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Pong.png" alt="Pong">
+      <a href="https://pong-2.com/" target="_blank"><button>Play</button></a>
+    </div>
+
   </div>
 </body>
 </html>
