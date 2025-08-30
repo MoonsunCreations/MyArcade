@@ -6,151 +6,94 @@
   <title>Moonsun Creation Arcade Ultra Pro</title>
   <style>
     body {
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      font-family: 'Press Start 2P', cursive;
-      background: radial-gradient(circle at top, #0a0a0a, #1a1a2e);
+      padding: 0;
+      background: #000;
       color: white;
       text-align: center;
     }
     header {
       padding: 20px;
-      background: transparent;
-      font-size: 22px;
-      color: cyan;
-      text-shadow: 0 0 10px #0ff, 0 0 20px #00f;
     }
-    .mute-btn {
-      padding: 8px 16px;
-      margin-left: 10px;
-      border: none;
-      border-radius: 10px;
-      background: #ff69b4;
-      color: white;
-      cursor: pointer;
-      font-size: 14px;
+    h1 {
+      font-size: 28px;
+      color: #00eaff;
+      text-shadow: 0 0 12px #00eaff, 0 0 24px #00eaff;
     }
     h2 {
-      color: yellow;
-      text-shadow: 0 0 5px #ff0, 0 0 10px #f80;
+      font-size: 22px;
+      color: #ffeb3b;
+      text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b;
+      margin-bottom: 25px;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 15px;
       padding: 20px;
     }
-    .card {
-      background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+    .game-card {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
       border-radius: 15px;
-      padding: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     }
-    .card h3 {
-      font-size: 14px;
+    .game-card img {
+      width: 60px;
+      height: 60px;
+    }
+    .game-card h3 {
       margin: 10px 0;
-    }
-    .emoji {
-      font-size: 40px;
+      font-size: 18px;
+      color: #222;
     }
     .play-btn {
       display: inline-block;
-      margin-top: 10px;
-      padding: 6px 12px;
-      background: linear-gradient(to right, #6a11cb, #2575fc);
+      padding: 8px 18px;
+      background: linear-gradient(90deg, #3f51b5, #2196f3);
       color: white;
-      border-radius: 10px;
+      border-radius: 8px;
       text-decoration: none;
-      font-size: 12px;
+      font-weight: bold;
+      margin-top: 10px;
     }
     footer {
-      margin-top: 20px;
+      margin-top: 30px;
       padding: 15px;
-      font-size: 12px;
-      color: #aaa;
+      font-size: 14px;
+      color: #bbb;
     }
   </style>
 </head>
 <body>
   <header>
-    🎮 Moonsun Creation Arcade Ultra Pro 🎮
-    <button class="mute-btn" onclick="toggleMusic()">MUTE</button>
+    <h1>🎮 Moonsun Creation Arcade Ultra Pro 🎮</h1>
+    <h2>✨ Play 10+ Free Games ✨</h2>
   </header>
 
-  <h2>Play 10+ Free Games</h2>
-
-  <section class="grid">
-    <div class="card">
-      <div class="emoji">🐍</div>
-      <h3>Snake</h3>
-      <a class="play-btn" href="#">PLAY</a>
-    </div>
-    <div class="card">
-      <div class="emoji">🟡</div>
-      <h3>Pacman</h3>
-      <a class="play-btn" href="#">PLAY</a>
-    </div>
-    <div class="card">
-      <div class="emoji">🐦</div>
-      <h3>Flappy Bird</h3>
-      <a class="play-btn" href="#">PLAY</a>
-    </div>
-    <div class="card">
-      <div class="emoji">🏓</div>
-      <h3>Pong</h3>
-      <a class="play-btn" href="#">PLAY</a>
-    </div>
-    <div class="card">
-      <div class="emoji">🚗</div>
-      <h3>Car Race</h3>
-      <a class="play-btn" href="#">PLAY</a>
-    </div>
-    <div class="card">
-      <div class="emoji">💣</div>
-      <h3>Bomberman</h3>
-      <a class="play-btn" href="#">PLAY</a>
-    </div>
-    <div class="card">
-      <div class="emoji">🏹</div>
-      <h3>Archery</h3>
-      <a class="play-btn" href="#">PLAY</a>
-    </div>
-    <div class="card">
-      <div class="emoji">🎲</div>
-      <h3>Tetris</h3>
-      <a class="play-btn" href="#">PLAY</a>
-    </div>
-    <div class="card">
-      <div class="emoji">⚽</div>
-      <h3>Football</h3>
-      <a class="play-btn" href="#">PLAY</a>
-    </div>
-    <div class="card">
-      <div class="emoji">🔫</div>
-      <h3>Shooting</h3>
-      <a class="play-btn" href="#">PLAY</a>
-    </div>
-  </section>
+  <div class="grid">
+    <!-- 15 Game Cards -->
+    <div class="game-card"><img src="https://img.icons8.com/color/96/snake.png"><h3>Snake</h3><a class="play-btn" href="#">PLAY</a></div>
+    <div class="game-card"><img src="https://img.icons8.com/color/96/pacman.png"><h3>Pacman</h3><a class="play-btn" href="#">PLAY</a></div>
+    <div class="game-card"><img src="https://img.icons8.com/color/96/bird.png"><h3>Flappy Bird</h3><a class="play-btn" href="#">PLAY</a></div>
+    <div class="game-card"><img src="https://img.icons8.com/color/96/chessboard.png"><h3>Chess</h3><a class="play-btn" href="#">PLAY</a></div>
+    <div class="game-card"><img src="https://img.icons8.com/color/96/tetris.png"><h3>Tetris</h3><a class="play-btn" href="#">PLAY</a></div>
+    <div class="game-card"><img src="https://img.icons8.com/color/96/car.png"><h3>Car Racing</h3><a class="play-btn" href="#">PLAY</a></div>
+    <div class="game-card"><img src="https://img.icons8.com/color/96/shooting.png"><h3>Shooting</h3><a class="play-btn" href="#">PLAY</a></div>
+    <div class="game-card"><img src="https://img.icons8.com/color/96/basketball.png"><h3>Basketball</h3><a class="play-btn" href="#">PLAY</a></div>
+    <div class="game-card"><img src="https://img.icons8.com/color/96/soccer-ball.png"><h3>Football</h3><a class="play-btn" href="#">PLAY</a></div>
+    <div class="game-card"><img src="https://img.icons8.com/color/96/mario.png"><h3>Mario</h3><a class="play-btn" href="#">PLAY</a></div>
+    <div class="game-card"><img src="https://img.icons8.com/color/96/tennis.png"><h3>Tennis</h3><a class="play-btn" href="#">PLAY</a></div>
+    <div class="game-card"><img src="https://img.icons8.com/color/96/boxing.png"><h3>Boxing</h3><a class="play-btn" href="#">PLAY</a></div>
+    <div class="game-card"><img src="https://img.icons8.com/color/96/archery.png"><h3>Archery</h3><a class="play-btn" href="#">PLAY</a></div>
+    <div class="game-card"><img src="https://img.icons8.com/color/96/rocket.png"><h3>Space Invader</h3><a class="play-btn" href="#">PLAY</a></div>
+    <div class="game-card"><img src="https://img.icons8.com/color/96/dice.png"><h3>Dice Game</h3><a class="play-btn" href="#">PLAY</a></div>
+  </div>
 
   <footer>
     Made with ❤️ by Moonsun Creation
   </footer>
-
-  <audio id="bg-music" loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-  </audio>
-
-  <script>
-    let music = document.getElementById("bg-music");
-    let playing = false;
-    function toggleMusic(){
-      if(playing){
-        music.pause();
-        playing = false;
-      } else {
-        music.play();
-        playing = true;
-      }
-    }
-  </script>
 </body>
 </html>
